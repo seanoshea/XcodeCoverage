@@ -33,6 +33,13 @@ exclude_data()
 {
     LCOV --remove ${LCOV_INFO} "Applications/Xcode.app/*" -d "${OBJ_DIR}" -o ${LCOV_INFO}
     LCOV --remove ${LCOV_INFO} "main.m" -d "${OBJ_DIR}" -o ${LCOV_INFO}
+    LCOV --remove ${LCOV_INFO} "Dependencies/*" -d "${OBJ_DIR}" -o ${LCOV_INFO}
+    LCOV --remove ${LCOV_INFO} "LogicTests/*" -d "${OBJ_DIR}" -o ${LCOV_INFO}
+    LCOV --remove ${LCOV_INFO} "BFSDKTests/*" -d "${OBJ_DIR}" -o ${LCOV_INFO}
+    LCOV --remove ${LCOV_INFO} "JSON/*" -d "${OBJ_DIR}" -o ${LCOV_INFO}
+    LCOV --remove ${LCOV_INFO} "UIResponder+HCFirstResponder/*" -d "${OBJ_DIR}" -o ${LCOV_INFO}
+    LCOV --remove ${LCOV_INFO} "GoogleToolbox/*" -d "${OBJ_DIR}" -o ${LCOV_INFO}
+    LCOV --remove ${LCOV_INFO} "AppiraterPlus/*" -d "${OBJ_DIR}" -o ${LCOV_INFO}
     # Remove other patterns here...
 }
 
